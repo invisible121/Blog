@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Moexin&#39;s Blog</title>
+  <id>https://98k.li/blog</id>
+  <updated>2018-03-22T16:54:14+08:00</updated>
+  <subtitle>心若浮沉，浅笑安然。一期一会，世当珍惜。</subtitle>
+  <link href="https://98k.li/blog"></link>
+  <author>
+    <name>Moexin&#39;s Blog</name>
+  </author>
+  <entry>
+    <title>Typecho程序伪静态规则大全(包括Linux/Windows)</title>
+    <updated>2017-01-22T17:36:00+08:00</updated>
+    <id>tag:98k.li,2017-01-22:/blog/typecho程序伪静态规则大全(包括linuxwindows).html</id>
+    <content type="html">&lt;p&gt;Typecho程序的伪静态规则不同于WordPress直接默认可用，需要我们手工加载到空间中才可以生效。下面整理了这款程序在不同的主机环境中的伪静态规则，希望对大家有所帮助。&lt;/p&gt;&#xA;</content>
+    <link href="https://98k.li/blog/typecho程序伪静态规则大全(包括linuxwindows).html"></link>
+    <author>
+      <name>Moexin</name>
+    </author>
+  </entry>
+</feed>
