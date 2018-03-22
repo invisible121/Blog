@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=1">
+<meta name="renderer" content="webkit">
+<meta name="google" value="notranslate">
+<meta name="robots" content="index,follow">
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Moexin&#39;s Blog">
+<meta name="twitter:description" content="心若浮沉，浅笑安然。一期一会，世当珍惜。">
+<meta name="twitter:image:src" content="https://98k.li/blog/blog/images/favicon.png">
+
+<meta property="og:url" content="https://98k.li/blog">
+<meta property="og:title" content="Moexin&#39;s Blog">
+<meta property="og:description" content="心若浮沉，浅笑安然。一期一会，世当珍惜。">
+<meta property="og:site_name" content="Moexin&#39;s Blog">
+<meta property="og:image" content="https://98k.li/blog/blog/images/favicon.png">
+<meta property="og:type" content="website">
+<meta name="robots" content="noodp">
+
+<meta itemprop="name" content="Moexin&#39;s Blog">
+<meta itemprop="description" content="心若浮沉，浅笑安然。一期一会，世当珍惜。">
+<meta itemprop="image" content="https://98k.li/blog/blog/images/favicon.png">
+
+<link rel="canonical" href="https://98k.li/blog">
+
+<link rel="shortcut icon" href="/blog/favicon.png">
+<link rel="apple-itouch-icon" href="/blog/favicon.png">
+<link rel="stylesheet" href="/blog/bundle/index.css">
+<script type="text/javascript">
+    var timeSinceLang = {
+        year: '年前',
+        month: '个月前',
+        day: '天前',
+        hour: '小时前',
+        minute: '分钟前',
+        second: '秒前'
+    };
+    var root = '\/blog';
+</script>
+
+
+        <meta name="keywords" content="V2Ray,Shell,脚本,">
+        <meta name="description" content="V2Ray 基于 Nginx 的 VMESS&#43;WS&#43;TLS 一键安装脚本 （Use Path）">
+        <meta name="author" content="Moexin">
+        <title>V2Ray 基于 Nginx 的 VMESS&#43;WS&#43;TLS 一键安装脚本 （Use Path）</title>
+    </head>
+    <body>
+        <article class="container">
+            <header class="header-wrap">
+  <a class="index" href="/blog/">
+    <img class="logo" src="/blog/images/favicon.png" />
+    Moexin&#39;s Blog
+  </a>
+  <ul class="menu">
+      <li class="menu-item"><a href="/blog/archive.html">归档</a></li>
+      <li class="menu-item"><a href="/blog/tag.html">标签</a></li>
+	  <li class="menu-item"><a href="/blog/link.html">友链</a></li>
+      <li class="menu-item"><a href="/blog/atom.xml">订阅</a></li>
+  </ul>
+</header>
+
+            <article class="main article">
+                <h1 class="title">V2Ray 基于 Nginx 的 VMESS&#43;WS&#43;TLS 一键安装脚本 （Use Path）</h1>
+                <section class="info">
+                    <span class="avatar" style="background-image: url(/blog/images/favicon.png);"></span>
+                    <a class="name" href="/blog/about.me.html">Moexin</a>
+                    
+                    <span class="date" data-time="1519444560"><span class="from"></span></span>
+                    
+                    <span class="tags"><a class="tag" href="/blog/tag/V2Ray/index.html">V2Ray</a><a class="tag" href="/blog/tag/Shell/index.html">Shell</a><a class="tag" href="/blog/tag/%e8%84%9a%e6%9c%ac/index.html">脚本</a></span>
+                </section>
+                <article class="content"><ul>
+<li>V2Ray是一个优秀的开源网络代理工具，可以帮助你畅爽体验互联网，目前已经全平台支持Windows、Mac、Android、IOS、Linux等操作系统的使用。</li>
+<li>本脚本的另一个分支版本（Use Host）地址： <a href="https://github.com/dylanbai8/V2Ray_ws-tls_Website_onekey">https://github.com/dylanbai8/V2Ray_ws-tls_Website_onekey</a> 请根据需求进行选择， 感谢作者 dylanbai8 的改进与维护</li>
+<li>本脚本为一键完全配置脚本，在所有流程正常运行完毕后，直接按照输出结果设置客户端即可使用</li>
+<li>已安装的用户，当出现无法连接的情况时，请用户根据该文档更新 V2ray core</li>
+<li>请注意：我们依然强烈建议你全方面的了解整个程序的工作流程及原理</li>
+</ul>
+
+<h2>目前支持 Centos7 + / Debian 8+ / Ubuntu 16.04+</h2>
+
+<h2>如果你选择使用 V2ray，强烈建议你关闭并删除所有的 shadowsocksR 服务端，仅使用标准的 V2ray 三件套（原因请查看 Wiki ）</h2>
+
+<ul>
+<li>本脚本默认安装最新版本的V2ray core</li>
+<li>本脚本的第一批用户安装的内核为 V2ray core 3.6 版本，请该内核版本的用户，根据下文及时更新内核版本。</li>
+<li>V2ray core 目前最新版本为 3.13</li>
+<li>由于新版本增加了 web 伪装，因此强烈建议使用默认的443端口作为连接端口</li>
+
+<li><p><strong>感谢作者 dunizb 的自用 开源 html 计算器源码 项目地址 <a href="https://github.com/dunizb/sCalc">https://github.com/dunizb/sCalc</a></strong></p>
+
+<h2>V2ray core 更新方式</h2>
+
+<p>执行：
+<code>bash &lt;(curl -L -s https://install.direct/go.sh)</code></p></li>
+</ul>
+
+<p>（ 来源参考 ：<a href="https://www.v2ray.com/chapter_00/install.html">V2ray官方说明</a>）
+* 如果为最新版本，会输出提示并停止安装。否则会自动更新
+* 未来会将相关内容集成到本脚本中并进行交互式操作更新</p>
+
+<h2>注意事项</h2>
+
+<ul>
+<li>推荐在纯净环境下使用本脚本，如果你是新手，请不要使用Centos系统。</li>
+<li>在尝试本脚本确实可用之前，请不要将本程序应用于生产环境中。</li>
+<li>该程序依赖 Nginx 实现相关功能，请使用 <a href="https://lnmp.org">LNMP</a> 或其他类似携带 Nginx 脚本安装过 Nginx 的用户特别留意，使用本脚本可能会导致无法预知的错误（未测试，若存在，后续版本可能会处理本问题）。</li>
+<li>V2Ray 的部分功能依赖于系统时间，请确保您使用V2RAY程序的系统 UTC 时间误差在三分钟之内，时区无关。</li>
+<li>本 bash 依赖于 <a href="https://install.direct/go.sh">V2ray 官方安装脚本</a> 及 <a href="https://github.com/Neilpang/acme.sh">acme.sh</a> 工作。</li>
+
+<li><p>Centos 系统用户请预先在防火墙中放行程序相关端口（默认：80，443）</p>
+
+<h2>准备工作</h2></li>
+
+<li><p>准备一个域名，并将A记录添加好。</p></li>
+
+<li><p><a href="https://www.v2ray.com/">V2ray官方说明</a>，了解 TLS WebSocket 及 V2ray 相关信息</p></li>
+
+<li><p>安装好 git</p>
+
+<h2>安装方式</h2>
+
+<pre><code>git clone https://github.com/wulabing/V2Ray_ws-tls_bash_onekey.git temp &amp;&amp; cd temp &amp;&amp; bash install.sh | tee v2ray_ins.log
+</code></pre>
+
+<h2>启动方式</h2></li>
+</ul>
+
+<p>启动 V2ray：<code>systemctl start v2ray</code></p>
+
+<p>启动 Nginx：<code>systemctl start nginx</code></p>
+
+<p>（其他的应该不用我多说了吧 嘿嘿嘿）</p>
+
+<h3>测试说明</h3>
+
+<ul>
+<li><p>V3.0 版本仅在 Debian 8 上进行过测试，目前需要收集更多的测试数据</p>
+
+<h3>问题反馈</h3></li>
+
+<li><p>请携带 v2ray_ins.log 文件内容进行反馈</p></li>
+</ul>
+</article>
+                <section class="author">
+                    <div class="avatar" style="background-image: url(/blog/images/favicon.png);"></div>
+                    <a class="name" href="/blog/about.me.html">Moexin</a>
+                    <div class="intro">心若浮沉，浅笑安然。一期一会，世当珍惜。</div>
+                </section>
+                <section class="recommend">
+                    
+                    <section class="nav prev more">
+                        <div class="head">上篇文章</div>
+                        <a class="link" href="/blog/v2ray%20%e5%9f%ba%e4%ba%8e%20nginx%20%e7%9a%84%20vmess&#43;ws&#43;tls&#43;website%28use%20host%29.html">V2Ray 基于 Nginx 的 VMESS&#43;WS&#43;TLS&#43;Website(Use Host)</a>
+                    </section>
+                    
+                    
+                    <section class="nav next more">
+                        <div class="head">下篇文章</div>
+                        <a class="link" href="/blog/bbr&#43;bbr%e9%ad%94%e6%94%b9&#43;lotsever%28%e9%94%90%e9%80%9f%29%e4%b8%80%e9%94%ae%e8%84%9a%e6%9c%ac%20for%20centosdebianubuntu.html">BBR&#43;BBR魔改&#43;Lotsever(锐速)一键脚本 for Centos/Debian/Ubuntu</a>
+                    </section>
+                    
+                </section>
+                
+
+
+
+            </article>
+        </article>
+        <footer class="footer">
+    <span class="copyright">
+        Moexin&#39;s Blog ©
+        <script type="text/javascript">
+            document.write(new Date().getFullYear());
+        </script>
+    </span>
+    <span class="publish">Powered by <a href="http://www.chole.io/" target="_blank">Ink</a></span>
+</footer>
+
+        <script src="/blog/bundle/index.js"></script>
+    </body>
+</html>

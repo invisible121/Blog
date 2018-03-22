@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=1">
+<meta name="renderer" content="webkit">
+<meta name="google" value="notranslate">
+<meta name="robots" content="index,follow">
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Moexin&#39;s Blog">
+<meta name="twitter:description" content="心若浮沉，浅笑安然。一期一会，世当珍惜。">
+<meta name="twitter:image:src" content="https://98k.li/blog/blog/images/favicon.png">
+
+<meta property="og:url" content="https://98k.li/blog">
+<meta property="og:title" content="Moexin&#39;s Blog">
+<meta property="og:description" content="心若浮沉，浅笑安然。一期一会，世当珍惜。">
+<meta property="og:site_name" content="Moexin&#39;s Blog">
+<meta property="og:image" content="https://98k.li/blog/blog/images/favicon.png">
+<meta property="og:type" content="website">
+<meta name="robots" content="noodp">
+
+<meta itemprop="name" content="Moexin&#39;s Blog">
+<meta itemprop="description" content="心若浮沉，浅笑安然。一期一会，世当珍惜。">
+<meta itemprop="image" content="https://98k.li/blog/blog/images/favicon.png">
+
+<link rel="canonical" href="https://98k.li/blog">
+
+<link rel="shortcut icon" href="/blog/favicon.png">
+<link rel="apple-itouch-icon" href="/blog/favicon.png">
+<link rel="stylesheet" href="/blog/bundle/index.css">
+<script type="text/javascript">
+    var timeSinceLang = {
+        year: '年前',
+        month: '个月前',
+        day: '天前',
+        hour: '小时前',
+        minute: '分钟前',
+        second: '秒前'
+    };
+    var root = '\/blog';
+</script>
+
+
+        <meta name="keywords" content="ShadowsoksR,Shell,脚本,">
+        <meta name="description" content="Easy-SSR-Bash-Python - ShadowsoksR多用户管理脚本，轻松添加修改，删除用户">
+        <meta name="author" content="Moexin">
+        <title>Easy-SSR-Bash-Python - ShadowsoksR多用户管理脚本，轻松添加修改，删除用户</title>
+    </head>
+    <body>
+        <article class="container">
+            <header class="header-wrap">
+  <a class="index" href="/blog/">
+    <img class="logo" src="/blog/images/favicon.png" />
+    Moexin&#39;s Blog
+  </a>
+  <ul class="menu">
+      <li class="menu-item"><a href="/blog/archive.html">归档</a></li>
+      <li class="menu-item"><a href="/blog/tag.html">标签</a></li>
+	  <li class="menu-item"><a href="/blog/link.html">友链</a></li>
+      <li class="menu-item"><a href="/blog/atom.xml">订阅</a></li>
+  </ul>
+</header>
+
+            <article class="main article">
+                <h1 class="title">Easy-SSR-Bash-Python - ShadowsoksR多用户管理脚本，轻松添加修改，删除用户</h1>
+                <section class="info">
+                    <span class="avatar" style="background-image: url(/blog/images/favicon.png);"></span>
+                    <a class="name" href="/blog/about.me.html">Moexin</a>
+                    
+                    <span class="date" data-time="1496312880"><span class="from"></span></span>
+                    
+                    <span class="tags"><a class="tag" href="/blog/tag/ShadowsoksR/index.html">ShadowsoksR</a><a class="tag" href="/blog/tag/Shell/index.html">Shell</a><a class="tag" href="/blog/tag/%e8%84%9a%e6%9c%ac/index.html">脚本</a></span>
+                </section>
+                <article class="content"><p>一个ShadowsocksR多用户管理Shell脚本（基于官方mujson版本），集成SSR多用户管理，流量限制，加密更改等基本操作。是一个基于ShadowsocksR官方的mujson的辅助脚本。方便用户操作。</p>
+
+<h2>系统支持</h2>
+
+<ul>
+<li>Ubuntu 14</li>
+<li>Ubuntu 16</li>
+<li>Debian 7</li>
+<li>Debian 8</li>
+<li>CentOS 6</li>
+<li>CentOS 7</li>
+</ul>
+
+<h2>功能</h2>
+
+<ul>
+<li>一键开启、关闭SSR服务</li>
+<li>添加、删除、修改用户端口和密码</li>
+<li>自由限制用户端口流量使用</li>
+<li>自动修改防火墙规则</li>
+<li>自助修改SSR加密方式、协议、混淆等参数</li>
+<li>自动统计，方便查询每个用户端口的流量使用情况</li>
+<li>自动安装Libsodium库以支持Chacha20等加密方式</li>
+</ul>
+
+<h2>缺点</h2>
+
+<ul>
+<li>无法删除最后一名用户（官方限制）</li>
+</ul>
+
+<h2>安装</h2>
+
+<p>###CentOS系列</p>
+
+<pre><code>yum update -y &amp;&amp; yum install unzip zip -y &amp;&amp; yum install wget -y &amp;&amp; wget -N --no-check-certificate https://raw.githubusercontent.com/Moexin/Easy-SSR-Bash-Python-The-Final/master/ssr.zip &amp;&amp; unzip ssr.zip &amp;&amp; cd SSR* &amp;&amp; bash install.sh
+</code></pre>
+
+<p>###Debian/Ubuntu系列</p>
+
+<pre><code>apt-get update -y &amp;&amp; apt-get install unzip zip -y &amp;&amp; apt-get install wget -y &amp;&amp; wget -N --no-check-certificate https://raw.githubusercontent.com/Moexin/Easy-SSR-Bash-Python-The-Final/master/ssr.zip &amp;&amp; unzip ssr.zip &amp;&amp; cd SSR* &amp;&amp; bash install.sh
+</code></pre>
+
+<h2>卸载</h2>
+
+<pre><code>cd /root/SSR-Bash-Python-The-Final &amp;&amp; bash uninstall.sh
+</code></pre>
+
+<h2>自检</h2>
+
+<pre><code>cd /root/SSR-Bash-Python-The-Final &amp;&amp; bash self-check.sh
+</code></pre>
+</article>
+                <section class="author">
+                    <div class="avatar" style="background-image: url(/blog/images/favicon.png);"></div>
+                    <a class="name" href="/blog/about.me.html">Moexin</a>
+                    <div class="intro">心若浮沉，浅笑安然。一期一会，世当珍惜。</div>
+                </section>
+                <section class="recommend">
+                    
+                    <section class="nav prev more">
+                        <div class="head">上篇文章</div>
+                        <a class="link" href="/blog/v2ray.fun%20-%20v2ray%e5%a4%9a%e5%8a%9f%e8%83%bd%e7%ae%a1%e7%90%86%e8%84%9a%e6%9c%ac%ef%bc%8c%e4%b8%8e%e4%b8%96%e7%95%8c%e5%88%86%e4%ba%ab%e8%87%aa%e7%94%b1.html">V2Ray.fun - V2Ray多功能管理脚本，与世界分享自由</a>
+                    </section>
+                    
+                    
+                    <section class="nav next more">
+                        <div class="head">下篇文章</div>
+                        <a class="link" href="/blog/%e9%ad%94%e6%94%b9%e7%89%88bbr%e4%b8%80%e9%94%ae%e5%ae%89%e8%a3%85%e8%84%9a%e6%9c%ac%20for%20debian8%20ubuntu16%20&#43;.html">魔改版BBR一键安装脚本 For Debian8 Ubuntu16 &#43;</a>
+                    </section>
+                    
+                </section>
+                
+
+
+
+            </article>
+        </article>
+        <footer class="footer">
+    <span class="copyright">
+        Moexin&#39;s Blog ©
+        <script type="text/javascript">
+            document.write(new Date().getFullYear());
+        </script>
+    </span>
+    <span class="publish">Powered by <a href="http://www.chole.io/" target="_blank">Ink</a></span>
+</footer>
+
+        <script src="/blog/bundle/index.js"></script>
+    </body>
+</html>

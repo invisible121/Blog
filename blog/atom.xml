@@ -1,18 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
   <title>Moexin&#39;s Blog</title>
   <id>https://98k.li/blog</id>
-  <updated>2018-03-22T16:54:14+08:00</updated>
+  <updated>2018-03-22T18:34:45+08:00</updated>
   <subtitle>心若浮沉，浅笑安然。一期一会，世当珍惜。</subtitle>
   <link href="https://98k.li/blog"></link>
   <author>
     <name>Moexin&#39;s Blog</name>
   </author>
   <entry>
-    <title>Typecho程序伪静态规则大全(包括Linux/Windows)</title>
-    <updated>2017-01-22T17:36:00+08:00</updated>
-    <id>tag:98k.li,2017-01-22:/blog/typecho程序伪静态规则大全(包括linuxwindows).html</id>
-    <content type="html">&lt;p&gt;Typecho程序的伪静态规则不同于WordPress直接默认可用，需要我们手工加载到空间中才可以生效。下面整理了这款程序在不同的主机环境中的伪静态规则，希望对大家有所帮助。&lt;/p&gt;&#xA;</content>
-    <link href="https://98k.li/blog/typecho程序伪静态规则大全(包括linuxwindows).html"></link>
+    <title>Linux下一键安装Python3.6.4脚本</title>
+    <updated>2018-03-19T22:49:00+08:00</updated>
+    <id>tag:98k.li,2018-03-19:/blog/linux下一键安装python3.6.4脚本.html</id>
+    <content type="html">&lt;p&gt;一个自己纯手打的一键脚本，可能会有诸多BUG喵~&lt;/p&gt;&#xA;</content>
+    <link href="https://98k.li/blog/linux下一键安装python3.6.4脚本.html"></link>
+    <author>
+      <name>Moexin</name>
+    </author>
+  </entry>
+  <entry>
+    <title>V2Ray 基于 Nginx 的 VMESS+WS+TLS+Website(Use Host)</title>
+    <updated>2018-03-19T20:04:00+08:00</updated>
+    <id>tag:98k.li,2018-03-19:/blog/v2ray 基于 nginx 的 vmess+ws+tls+website(use host).html</id>
+    <content type="html">&lt;p&gt;HTTP Header 分流，随机生成Header，自带 Website 伪装站点 http 强制跳转 https，自带 Rinetd BBR 加速，支持OpenVZ，自动生成客户端 config.json 配置文件，重装自动清除残余的 Http 服务，每天自动升级最新的 V2ray 内核。&lt;/p&gt;&#xA;</content>
+    <link href="https://98k.li/blog/v2ray 基于 nginx 的 vmess+ws+tls+website(use host).html"></link>
+    <author>
+      <name>Moexin</name>
+    </author>
+  </entry>
+  <entry>
+    <title>V2Ray 基于 Nginx 的 VMESS+WS+TLS 一键安装脚本 （Use Path）</title>
+    <updated>2018-02-24T11:56:00+08:00</updated>
+    <id>tag:98k.li,2018-02-24:/blog/v2ray 基于 nginx 的 vmess+ws+tls 一键安装脚本 （use path）.html</id>
+    <content type="html">&lt;p&gt;V2Ray是一个优秀的开源网络代理工具，可以帮助你畅爽体验互联网，目前已经全平台支持Windows、Mac、Android、IOS、Linux等操作系统的使用。&lt;/p&gt;&#xA;</content>
+    <link href="https://98k.li/blog/v2ray 基于 nginx 的 vmess+ws+tls 一键安装脚本 （use path）.html"></link>
+    <author>
+      <name>Moexin</name>
+    </author>
+  </entry>
+  <entry>
+    <title>BBR+BBR魔改+Lotsever(锐速)一键脚本 for Centos/Debian/Ubuntu</title>
+    <updated>2018-02-24T11:52:00+08:00</updated>
+    <id>tag:98k.li,2018-02-24:/blog/bbr+bbr魔改+lotsever(锐速)一键脚本 for centosdebianubuntu.html</id>
+    <content type="html">&lt;p&gt;对于出口带宽，我们常常采用BBR，锐速等TCP加速软件来争夺带宽提高自己的速度。但是原版的BBR并没有太多侵略性，在这个人人都用TCP加速的大环境下，BBR的加速功效就略显不足了。loc的大佬专门改进了下这个BBR，使BBR具有了侵略性。&lt;/p&gt;&#xA;</content>
+    <link href="https://98k.li/blog/bbr+bbr魔改+lotsever(锐速)一键脚本 for centosdebianubuntu.html"></link>
+    <author>
+      <name>Moexin</name>
+    </author>
+  </entry>
+  <entry>
+    <title>FinalShell 支持多平台  远程桌面加速  多功能优秀SSH客户端</title>
+    <updated>2017-12-10T11:41:00+08:00</updated>
+    <id>tag:98k.li,2017-12-10:/blog/finalshell 支持多平台  远程桌面加速  多功能优秀ssh客户端.html</id>
+    <content type="html">&lt;p&gt;FinalShell是一体化的的服务器,网络管理软件,不仅是ssh客户端,还是功能强大的开发,运维工具,充分满足开发,运维需求.&lt;/p&gt;&#xA;</content>
+    <link href="https://98k.li/blog/finalshell 支持多平台  远程桌面加速  多功能优秀ssh客户端.html"></link>
+    <author>
+      <name>Moexin</name>
+    </author>
+  </entry>
+  <entry>
+    <title>魔改 BBR 一键安装脚本 for Debian &amp; CentOS</title>
+    <updated>2017-11-18T15:46:00+08:00</updated>
+    <id>tag:98k.li,2017-11-18:/blog/魔改 bbr 一键安装脚本 for debian &amp; centos.html</id>
+    <content type="html">&lt;p&gt;BBR 当然是家喻户晓了，是出自谷歌员工之手的应用于 Linux 内核中的拥塞控制技术。为了加速国内与目标服务器间的网络，让 BBR 发挥出更大（暴力）的实力，魔改就此诞生。&lt;/p&gt;&#xA;</content>
+    <link href="https://98k.li/blog/魔改 bbr 一键安装脚本 for debian &amp; centos.html"></link>
+    <author>
+      <name>Moexin</name>
+    </author>
+  </entry>
+  <entry>
+    <title>好好珍惜身边的人，有些人一转身或许就真的是一辈子。</title>
+    <updated>2017-11-09T22:59:00+08:00</updated>
+    <id>tag:98k.li,2017-11-09:/blog/好好珍惜身边的人，有些人一转身或许就真的是一辈子。.html</id>
+    <content type="html">&lt;p&gt;在你心中是否有个无法被抹去的人，在你的记忆深处是否有个你不愿去触碰的人。每每想起她（他）就疼到无法呼吸，害怕遇见却又在心底期盼。&lt;/p&gt;&#xA;</content>
+    <link href="https://98k.li/blog/好好珍惜身边的人，有些人一转身或许就真的是一辈子。.html"></link>
+    <author>
+      <name>Moexin</name>
+    </author>
+  </entry>
+  <entry>
+    <title>ShadowsocksR MudbJSON模式多用户一键脚本 支持流量限制等</title>
+    <updated>2017-11-07T13:43:00+08:00</updated>
+    <id>tag:98k.li,2017-11-07:/blog/shadowsocksr mudbjson模式多用户一键脚本 支持流量限制等.html</id>
+    <content type="html">&lt;p&gt;很多人购买VPS后搭建ShadowsocksR服务端，只是几个人分享使用（比如合租），想要限制使用流量，但是又不想搭建网站面板来管理(数据库版多用户)，那么在服务器少的情况，可以使用 ShadowsocksR多用户的 mudbjson模式来建立本地数据库（就是数据记录在JSON文件中），同样可以实现简单的用户管理（限速 限流量），当然这个功能仅对当前服务器有效，不能多个服务器互联！&lt;/p&gt;&#xA;</content>
+    <link href="https://98k.li/blog/shadowsocksr mudbjson模式多用户一键脚本 支持流量限制等.html"></link>
+    <author>
+      <name>Moexin</name>
+    </author>
+  </entry>
+  <entry>
+    <title>人最软弱的地方是舍不得</title>
+    <updated>2017-10-25T18:37:00+08:00</updated>
+    <id>tag:98k.li,2017-10-25:/blog/人最软弱的地方是舍不得.html</id>
+    <content type="html">&lt;p&gt;真正的爱情，不是一见钟情，而是日久生情；真正的缘份，不是上天的安排，而是你的主动；真正的自卑，不是你不优秀，而是你把她想得太优秀；真正的关心，不是你认为好的就要求她改变，而是她的改变你是第一个发现的；真正的矛盾，不是她不理解你，而是你不会宽容她。&lt;/p&gt;&#xA;</content>
+    <link href="https://98k.li/blog/人最软弱的地方是舍不得.html"></link>
+    <author>
+      <name>Moexin</name>
+    </author>
+  </entry>
+  <entry>
+    <title>Typecho密码保护的文章如何保护内容而不保护标题</title>
+    <updated>2017-09-20T18:34:00+08:00</updated>
+    <id>tag:98k.li,2017-09-20:/blog/typecho密码保护的文章如何保护内容而不保护标题.html</id>
+    <content type="html">&lt;p&gt;Typecho密码保护貌似有点不人性化，我觉得内容保护了就好了，标题就不用保护了，如果多个文章都保护了，标题都一样都不知道哪个是要找的文章了。&lt;/p&gt;&#xA;</content>
+    <link href="https://98k.li/blog/typecho密码保护的文章如何保护内容而不保护标题.html"></link>
     <author>
       <name>Moexin</name>
     </author>
