@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
   <title>Moexin&#39;s Blog</title>
   <id>https://98k.li/blog</id>
-  <updated>2018-03-22T18:42:20+08:00</updated>
+  <updated>2018-03-22T19:40:10+08:00</updated>
   <subtitle>心若浮沉，浅笑安然。一期一会，世当珍惜。</subtitle>
   <link href="https://98k.li/blog"></link>
   <author>
     <name>Moexin&#39;s Blog</name>
   </author>
+  <entry>
+    <title>V2Ray Easy To Use - 各项配置一键脚本合集</title>
+    <updated>2018-03-22T11:56:00+08:00</updated>
+    <id>tag:98k.li,2018-03-22:/blog/v2ray easy to use - 各项配置一键脚本合集.html</id>
+    <content type="html">&lt;p&gt;V2Ray是一个优秀的开源网络代理工具，可以帮助你畅爽体验互联网，目前已经全平台支持Windows、Mac、Android、IOS、Linux等操作系统的使用。&lt;/p&gt;&#xA;</content>
+    <link href="https://98k.li/blog/v2ray easy to use - 各项配置一键脚本合集.html"></link>
+    <author>
+      <name>Moexin</name>
+    </author>
+  </entry>
   <entry>
     <title>Linux下一键安装Python3.6.4脚本</title>
     <updated>2018-03-19T22:49:00+08:00</updated>
@@ -93,16 +103,6 @@
     <id>tag:98k.li,2017-10-25:/blog/人最软弱的地方是舍不得.html</id>
     <content type="html">&lt;p&gt;真正的爱情，不是一见钟情，而是日久生情；真正的缘份，不是上天的安排，而是你的主动；真正的自卑，不是你不优秀，而是你把她想得太优秀；真正的关心，不是你认为好的就要求她改变，而是她的改变你是第一个发现的；真正的矛盾，不是她不理解你，而是你不会宽容她。&lt;/p&gt;&#xA;</content>
     <link href="https://98k.li/blog/人最软弱的地方是舍不得.html"></link>
-    <author>
-      <name>Moexin</name>
-    </author>
-  </entry>
-  <entry>
-    <title>Typecho密码保护的文章如何保护内容而不保护标题</title>
-    <updated>2017-09-20T18:34:00+08:00</updated>
-    <id>tag:98k.li,2017-09-20:/blog/typecho密码保护的文章如何保护内容而不保护标题.html</id>
-    <content type="html">&lt;p&gt;Typecho密码保护貌似有点不人性化，我觉得内容保护了就好了，标题就不用保护了，如果多个文章都保护了，标题都一样都不知道哪个是要找的文章了。&lt;/p&gt;&#xA;</content>
-    <link href="https://98k.li/blog/typecho密码保护的文章如何保护内容而不保护标题.html"></link>
     <author>
       <name>Moexin</name>
     </author>
