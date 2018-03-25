@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=1">
+<meta name="renderer" content="webkit">
+<meta name="google" value="notranslate">
+<meta name="robots" content="index,follow">
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Moexin&#39;s Blog">
+<meta name="twitter:description" content="心若浮沉，浅笑安然。一期一会，世当珍惜。">
+<meta name="twitter:image:src" content="https://98k.li/blog/blog/images/favicon.png">
+
+<meta property="og:url" content="https://98k.li/blog">
+<meta property="og:title" content="Moexin&#39;s Blog">
+<meta property="og:description" content="心若浮沉，浅笑安然。一期一会，世当珍惜。">
+<meta property="og:site_name" content="Moexin&#39;s Blog">
+<meta property="og:image" content="https://98k.li/blog/blog/images/favicon.png">
+<meta property="og:type" content="website">
+<meta name="robots" content="noodp">
+
+<meta itemprop="name" content="Moexin&#39;s Blog">
+<meta itemprop="description" content="心若浮沉，浅笑安然。一期一会，世当珍惜。">
+<meta itemprop="image" content="https://98k.li/blog/blog/images/favicon.png">
+
+<link rel="canonical" href="https://98k.li/blog">
+
+<link rel="shortcut icon" href="/blog/favicon.png">
+<link rel="apple-itouch-icon" href="/blog/favicon.png">
+<link rel="stylesheet" href="/blog/bundle/index.css">
+<script type="text/javascript">
+    var timeSinceLang = {
+        year: '年前',
+        month: '个月前',
+        day: '天前',
+        hour: '小时前',
+        minute: '分钟前',
+        second: '秒前'
+    };
+    var root = '\/blog';
+</script>
+
+
+        <meta name="keywords" content="V2Ray,Heroku,">
+        <meta name="description" content="V2Ray Easy To Heroku - 一键部署 V2Ray 到 Heroku">
+        <meta name="author" content="Moexin">
+        <title>V2Ray Easy To Heroku - 一键部署 V2Ray 到 Heroku</title>
+    </head>
+    <body>
+        <article class="container">
+            <header class="header-wrap">
+  <a class="index" href="/blog/">
+    <img class="logo" src="/blog/images/favicon.png" />
+    Moexin&#39;s Blog
+  </a>
+  <ul class="menu">
+      <li class="menu-item"><a href="/blog/archive.html">归档</a></li>
+      <li class="menu-item"><a href="/blog/tag.html">标签</a></li>
+	  <li class="menu-item"><a href="/blog/link.html">友链</a></li>
+      <li class="menu-item"><a href="/blog/atom.xml">订阅</a></li>
+  </ul>
+</header>
+
+            <article class="main article">
+                <h1 class="title">V2Ray Easy To Heroku - 一键部署 V2Ray 到 Heroku</h1>
+                <section class="info">
+                    <span class="avatar" style="background-image: url(/blog/images/favicon.png);"></span>
+                    <a class="name" href="/blog/about.me.html">Moexin</a>
+                    
+                    <span class="date" data-time="1521690960"><span class="from"></span></span>
+                    
+                    <span class="tags"><a class="tag" href="/blog/tag/V2Ray/index.html">V2Ray</a><a class="tag" href="/blog/tag/Heroku/index.html">Heroku</a></span>
+                </section>
+                <article class="content"><p><a href="https://heroku.com/deploy?template=https://github.com/Moexin/v2ray-heroku"><img src="data:image/gif;base64,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" data-src="https://www.herokucdn.com/deploy/button.png" alt="↑↑↑点我部署↑↑↑" /></a></p>
+
+<h1>配置说明：</h1>
+
+<h4>别名(Remarks)：任意字符</h4>
+
+<h4>地址(Address)：您的app地址</h4>
+
+<h4>端口(Port):443</h4>
+
+<h4>用户ID(ID):您设置的UUID</h4>
+
+<h4>额外ID(AlterID):100</h4>
+
+<h4>加密方式(Security)：none</h4>
+
+<h4>传输协议(Network）：ws</h4>
+
+<h4>伪装类型(Type）：none</h4>
+
+<h4>伪装域名/其他项：/fuckgfw_gfwmotherfuckingboom</h4>
+
+<h4>底层传输安全(TLS)：tls</h4>
+</article>
+                <section class="author">
+                    <div class="avatar" style="background-image: url(/blog/images/favicon.png);"></div>
+                    <a class="name" href="/blog/about.me.html">Moexin</a>
+                    <div class="intro">心若浮沉，浅笑安然。一期一会，世当珍惜。</div>
+                </section>
+                <section class="recommend">
+                    
+                    <section class="nav prev more">
+                        <div class="head">上篇文章</div>
+                        <a class="link" href="/blog/v2ray%20easy%20to%20use%20-%20v2ray%20%e4%b8%80%e9%94%ae%e5%ae%89%e8%a3%85%e8%84%9a%e6%9c%ac%20&amp;%20%e7%ae%a1%e7%90%86%e8%84%9a%e6%9c%ac.html">V2Ray Easy To Use - V2Ray 一键安装脚本 &amp; 管理脚本</a>
+                    </section>
+                    
+                    
+                    <section class="nav next more">
+                        <div class="head">下篇文章</div>
+                        <a class="link" href="/blog/linux%e4%b8%8b%e4%b8%80%e9%94%ae%e5%ae%89%e8%a3%85python3.6.4%e8%84%9a%e6%9c%ac.html">Linux下一键安装Python3.6.4脚本</a>
+                    </section>
+                    
+                </section>
+                
+
+
+
+            </article>
+        </article>
+        <footer class="footer">
+    <span class="copyright">
+        Moexin&#39;s Blog ©
+        <script type="text/javascript">
+            document.write(new Date().getFullYear());
+        </script>
+    </span>
+    <span class="publish">Powered by <a href="//98k.li" target="_blank">Moexin</a></span>
+</footer>
+
+        <script src="/blog/bundle/index.js"></script>
+    </body>
+</html>

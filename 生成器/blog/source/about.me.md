@@ -19,8 +19,6 @@ author: me
  - 图床服务：[SM.MS][7]
  - 域名解析：[Cloudflare][8]
 
-## 赞助 ##
-如果哪篇文章对你有所帮助，且您手头还很宽裕，欢迎打赏赞助我
 
   [1]: https://98k.li
   [2]: https://wpa.qq.com/msgrd?v=3&uin=947537247

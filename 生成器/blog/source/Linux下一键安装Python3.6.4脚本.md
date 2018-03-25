@@ -10,10 +10,10 @@ preview: 一个自己纯手打的一键脚本，可能会有诸多BUG喵~
 ---
 
 ## CentOS系统
-```shell
+```bash
 wget https://raw.githubusercontent.com/Moexin/Python3.6.4-OneKey/master/CentOS-Python3.6.4.sh && sh CentOS-Python3.6.4.sh
 ```
-## Debian系统
-```shell
+## Debian\Ubuntu系统
+```bash
 wget https://raw.githubusercontent.com/Moexin/Python3.6.4-OneKey/master/Debian-Python3.6.4.sh && sh Debian-Python3.6.4.sh
 ```
