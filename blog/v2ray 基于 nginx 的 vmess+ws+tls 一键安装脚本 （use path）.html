@@ -71,11 +71,16 @@
                     <span class="avatar" style="background-image: url(/blog/images/favicon.png);"></span>
                     <a class="name" href="/blog/about.me.html">Moexin</a>
                     
-                    <span class="date" data-time="1519444560"><span class="from"></span></span>
+                    <span class="date" data-time="1522898100"><span class="from"></span></span>
                     
                     <span class="tags"><a class="tag" href="/blog/tag/V2Ray/index.html">V2Ray</a><a class="tag" href="/blog/tag/Shell/index.html">Shell</a><a class="tag" href="/blog/tag/%e8%84%9a%e6%9c%ac/index.html">脚本</a></span>
                 </section>
-                <article class="content"><ul>
+                <article class="content"><p>更新预告 V4.0（时间未定）：下一个大版本更新将会把 h5ai（<a href="https://larsjung.de/h5ai/demo/">demo</a>）与 V2ray 结合接起来,同时不会取消当前的计算器伪装，由用户自行选择 伪装页面</p>
+
+<h2>V3.2 版本更新虽然对Nginx中添加了http2和TLS1.3的配置信息，但是没什么卵用。因为tls1.3需要openssl版本至少为1.1.1（目前不是stable版本），http2要求openssl至少为1.0.2（db8默认是1.0.1，db9默认可支持），并且golang目前尚未支持TLS1.3，所以此变更只是给用户点心理安慰，访问网页还是走的TLS1.2</h2>
+
+<ul>
+<li>h5ai is a modern file indexer for HTTP web servers with focus on your files. Directories are displayed in a appealing way and browsing them is enhanced by different views, a breadcrumb and a tree overview. Initially h5ai was an acronym for HTML5 Apache Index but now it supports other web servers too.</li>
 <li>V2Ray是一个优秀的开源网络代理工具，可以帮助你畅爽体验互联网，目前已经全平台支持Windows、Mac、Android、IOS、Linux等操作系统的使用。</li>
 <li>本脚本的另一个分支版本（Use Host）地址： <a href="https://github.com/dylanbai8/V2Ray_ws-tls_Website_onekey">https://github.com/dylanbai8/V2Ray_ws-tls_Website_onekey</a> 请根据需求进行选择， 感谢作者 dylanbai8 的改进与维护</li>
 <li>本脚本为一键完全配置脚本，在所有流程正常运行完毕后，直接按照输出结果设置客户端即可使用</li>
@@ -83,14 +88,14 @@
 <li>请注意：我们依然强烈建议你全方面的了解整个程序的工作流程及原理</li>
 </ul>
 
-<h2>目前支持 Centos7 + / Debian 8+ / Ubuntu 16.04+</h2>
+<h2>目前支持Debian 8+ / Ubuntu 16.04+ / Centos7</h2>
 
 <h2>如果你选择使用 V2ray，强烈建议你关闭并删除所有的 shadowsocksR 服务端，仅使用标准的 V2ray 三件套（原因请查看 Wiki ）</h2>
 
 <ul>
 <li>本脚本默认安装最新版本的V2ray core</li>
 <li>本脚本的第一批用户安装的内核为 V2ray core 3.6 版本，请该内核版本的用户，根据下文及时更新内核版本。</li>
-<li>V2ray core 目前最新版本为 3.13</li>
+<li>V2ray core 目前最新版本为 3.14</li>
 <li>由于新版本增加了 web 伪装，因此强烈建议使用默认的443端口作为连接端口</li>
 
 <li><p><strong>感谢作者 dunizb 的自用 开源 html 计算器源码 项目地址 <a href="https://github.com/dunizb/sCalc">https://github.com/dunizb/sCalc</a></strong></p>
@@ -141,12 +146,109 @@
 <h3>测试说明</h3>
 
 <ul>
-<li><p>V3.0 版本仅在 Debian 8 上进行过测试，目前需要收集更多的测试数据</p>
+<li><p>V3.1 版本在 Debian 8 / Debian 9 / Ubuntu 16.04 / Centos 7(防火墙着实又坑了我一把) 上进行过测试。</p></li>
 
-<h3>问题反馈</h3></li>
+<li><p>请携带 v2ray_ins.log 文件内容进行反馈</p>
 
-<li><p>请携带 v2ray_ins.log 文件内容进行反馈</p></li>
+<h3>更新说明</h3>
+
+<h2>2018-04-03</h2>
+
+<p>V3.2(Beta)</p></li>
+
+<li><p>Nginx 版本更新至mainline版本</p></li>
+
+<li><p>Nginx 配置中添加 TLS1.3 http2</p>
+
+<h2>2018-03-26</h2>
+
+<p>V3.1(Beta)</p></li>
+
+<li><p>1.去除无关的依赖</p></li>
+
+<li><p>2.安装顺序变更，SSL生成放在程序末尾</p></li>
+
+<li><p>3.NGINX 安装版本统一为最新 stable 版本（为将来可能进行的 http2 及 tls1.3 适配做好准备,debian 源默认 NGINX 版本过低不支持 http2）</p>
+
+<h2>2018-03-18</h2>
+
+<p>V3.0(Stable)</p></li>
+
+<li><p>1.修复 Path 分流时访问特定的伪装 Path 时出现的 Bad Request 问题 （统一为404 Not Found）</p>
+
+<h2>2018-03-10</h2>
+
+<p>V3.0(beta)</p></li>
+
+<li><p>1.部分功能进行代码重构</p></li>
+
+<li><p>2.添加了 301 重定向，即 http 强制跳转 https</p></li>
+
+<li><p>3.添加了 页面伪装（一个计算器程序）</p></li>
+
+<li><p>4.伪装path 从原来的/ray/ 变为 随机生成</p>
+
+<h2>2018-03-05</h2>
+
+<p>V2.1.1(stable)</p></li>
+
+<li><p>1.变更 检测到端口占用后，尝试自动kill相关进程</p></li>
+
+<li><p>2.尝试修复 GCE 默认纯净模板80端口占用问题（等待更多反馈）</p>
+
+<h2>2018-02-04</h2>
+
+<p>V2.1.1(stable)</p></li>
+
+<li><p>1.变更 local_ip 判断方式，从 本地网卡获取 变更至 命令获取 公网IP。</p></li>
+
+<li><p>1.修复 域名dns解析IP 与 本机IP 不匹配 误报问题</p>
+
+<h2>2018-01-28</h2>
+
+<p>v2.1.1(stable)</p></li>
+
+<li><p>1.修复 缺乏 lsof 依赖导致的端口占用判断异常问题</p>
+
+<h2>2018-01-27</h2>
+
+<p>v2.1.1(stable）</p></li>
+
+<li><p>1.修复 部分机型因缺乏 crontab （计划任务）依赖导致的安装失败问题</p></li>
+
+<li><p>2.完善 端口占用 判断</p>
+
+<h2>2017-12-06</h2>
+
+<p>V2.1（stable）</p></li>
+
+<li><p>1.修复 Centos7 找不到 Nginx 安装包的问题</p></li>
+
+<li><p>2.完善 SElinux 配置过程提醒标识</p></li>
 </ul>
+
+<p>V2.0（stable）<br />
+* 1.增加 Centos7 系统支持<br />
+* 2.增加 自定义端口 和 自定义alterID<br />
+* 3.完善 安装所需依赖<br />
+* 4.修复 Ubuntu 系列系统版本判断异常导致的安装中断问题<br />
+* 5.修复 bug</p>
+
+<p>V1.02（beta）<br />
+* 1.增加 系统判定，目前打算仅支持带systemd的较新主流开发版系统<br />
+* 2.本机 IP 获取方式重构</p>
+
+<h2>2017-12-05</h2>
+
+<p>V1.01（beta）<br />
+* 1.完善 支持 Debian9<br />
+* 2.修复 由于 Debian9 默认未安装 net-tools 导致的本机ip判定错误<br />
+* 3.修复 bc 安装问题<br />
+* 4.增加 ip 判定不一致时继续安装的选项（由于某些vps情况比较特殊，判定到内网IP或本身网卡信息，或公网ip与服务期内信息不一致等情况）</p>
+
+<p>V1.0（beta）<br />
+* 1.目前仅支持 Debian 8+ / Ubuntu 16.04+<br />
+* 2.逐渐完善中</p>
 </article>
                 <section class="author">
                     <div class="avatar" style="background-image: url(/blog/images/favicon.png);"></div>
