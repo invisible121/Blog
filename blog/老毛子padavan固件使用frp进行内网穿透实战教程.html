@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=1">
+<meta name="renderer" content="webkit">
+<meta name="google" value="notranslate">
+<meta name="robots" content="index,follow">
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Moexin&#39;s Blog">
+<meta name="twitter:description" content="心若浮沉，浅笑安然。一期一会，世当珍惜。">
+<meta name="twitter:image:src" content="https://98k.li/blog/blog/images/favicon.png">
+
+<meta property="og:url" content="https://98k.li/blog">
+<meta property="og:title" content="Moexin&#39;s Blog">
+<meta property="og:description" content="心若浮沉，浅笑安然。一期一会，世当珍惜。">
+<meta property="og:site_name" content="Moexin&#39;s Blog">
+<meta property="og:image" content="https://98k.li/blog/blog/images/favicon.png">
+<meta property="og:type" content="website">
+<meta name="robots" content="noodp">
+
+<meta itemprop="name" content="Moexin&#39;s Blog">
+<meta itemprop="description" content="心若浮沉，浅笑安然。一期一会，世当珍惜。">
+<meta itemprop="image" content="https://98k.li/blog/blog/images/favicon.png">
+
+<link rel="canonical" href="https://98k.li/blog">
+
+<link rel="shortcut icon" href="/blog/favicon.png">
+<link rel="apple-itouch-icon" href="/blog/favicon.png">
+<link rel="stylesheet" href="/blog/bundle/index.css">
+<script type="text/javascript">
+    var timeSinceLang = {
+        year: '年前',
+        month: '个月前',
+        day: '天前',
+        hour: '小时前',
+        minute: '分钟前',
+        second: '秒前'
+    };
+    var root = '\/blog';
+</script>
+
+
+        <meta name="keywords" content="内网穿透,">
+        <meta name="description" content="老毛子Padavan固件使用Frp进行内网穿透实战教程">
+        <meta name="author" content="Moexin">
+        <title>老毛子Padavan固件使用Frp进行内网穿透实战教程</title>
+    </head>
+    <body>
+        <article class="container">
+            <header class="header-wrap">
+  <a class="index" href="/blog/">
+    <img class="logo" src="/blog/images/favicon.png" />
+    Moexin&#39;s Blog
+  </a>
+  <ul class="menu">
+      <li class="menu-item"><a href="/blog/archive.html">归档</a></li>
+      <li class="menu-item"><a href="/blog/tag.html">标签</a></li>
+	  <li class="menu-item"><a href="/blog/link.html">友链</a></li>
+      <li class="menu-item"><a href="/blog/atom.xml">订阅</a></li>
+  </ul>
+</header>
+
+            <article class="main article">
+                <h1 class="title">老毛子Padavan固件使用Frp进行内网穿透实战教程</h1>
+                <section class="info">
+                    <span class="avatar" style="background-image: url(/blog/images/favicon.png);"></span>
+                    <a class="name" href="/blog/about.me.html">Moexin</a>
+                    
+                    <span class="date" data-time="1523458140"><span class="from"></span></span>
+                    
+                    <span class="tags"><a class="tag" href="/blog/tag/%e5%86%85%e7%bd%91%e7%a9%bf%e9%80%8f/index.html">内网穿透</a></span>
+                </section>
+                <article class="content"><h2>缘起</h2>
+
+<p>一直在用老毛子Padavan固件，然而近期有一个需要在外网访问内网某资源的需求，然后看到老毛子固件集成了Ngrok，然后使用小宝的一键安装搞半天还是没成，一怒之下去各种找替代Ngrok的方案。一不小心在GitHub上找到一个小清新，那就是Frp(<a href="https://github.com/fatedier/frp)作者也是因为受不了Ngrok，然后自己整了这个方案。">https://github.com/fatedier/frp)作者也是因为受不了Ngrok，然后自己整了这个方案。</a></p>
+
+<h2>Frp方案优势</h2>
+
+<ol>
+<li>作者已经编译了各平台的二进制包，无需自己编译。</li>
+<li>配置简单，只有一个主配置文件，并且服务端配好后其实可以不用再上去配了。</li>
+<li>不占用服务端80端口，服务器还是可以起Nginx对外服务的。</li>
+<li>支持转发TCP，HTTP，支持SSH。</li>
+</ol>
+
+<p>不夸了，各位自己看作者的帮助就好，中文帮助在此：<a href="https://github.com/fatedier/frp/blob/master/README_zh.md">https://github.com/fatedier/frp/blob/master/README_zh.md</a></p>
+
+<h3>服务端：</h3>
+
+<p>最新版本下载地址：<a href="https://github.com/fatedier/frp/releases">https://github.com/fatedier/frp/releases</a>
+我们以v0.16.1版本在一台装有Debian8 x64系统的VPS为例。</p>
+
+<p>首先拉取Frp v0.16.1版本的压缩包</p>
+
+<pre><code class="language-lsl">wget https://github.com/fatedier/frp/releases/download/v0.16.1/frp_0.16.1_linux_amd64.tar.gz
+</code></pre>
+
+<p>然后解压</p>
+
+<pre><code class="language-lsl">tar zxvf frp_0.16.1_linux_amd64.tar.gz
+</code></pre>
+
+<p>修改服务端配置文件</p>
+
+<pre><code class="language-lsl">vi /root/frp_0.16.1_linux_amd64/frps.ini
+</code></pre>
+
+<p>按下i进入编辑模式，清空所有内容，键入以下内容（这是我自用的配置文件，可参考注释进行自定义。）</p>
+
+<pre><code class="language-ini">[common]
+bind_port = 7000
+#Web服务监听端口
+vhost_http_port = 80
+vhost_https_port = 443
+#与客户端通讯的密匙
+privilege_token = Moexin
+#连接池上限
+max_pool_count = 50
+max_ports_per_client = 0
+#超时时间
+authentication_timeout = 900
+#TCP多路复用
+tcp_mux = true
+#仪表盘
+dashboard_port = 10086
+dashboard_user = admin
+dashboard_pwd = admin
+#底层通信可选KCP协议
+#kcp_bind_port = 7000
+#bind_udp_port = 7001
+#端口白名单
+#privilege_allow_ports = 22,80,443,50000-60000
+#错误日志(可选)
+#log_file = ./frps.log
+#log_level = info
+#log_max_days = 3
+</code></pre>
+
+<p>进入Frp工作目录</p>
+
+<pre><code class="language-lsl">cd /root/frp_0.16.1_linux_amd64
+</code></pre>
+
+<p>启动Frp</p>
+
+<pre><code class="language-jboss-cli">./frps -c ./frps.ini&amp;
+</code></pre>
+
+<p>建议将Frp服务端程序加入开机自启动，这样就不用每次重启后都需要手动打开Frp服务端</p>
+
+<pre><code class="language-maxima">vi /etc/rc.local
+</code></pre>
+
+<p>在exit 0之前插入即可</p>
+
+<pre><code class="language-jboss-cli">cd /root/frp_0.16.1_linux_amd64 &amp;&amp; ./frps -c ./frps.ini&amp;
+</code></pre>
+
+<h3>客户端：</h3>
+
+<p>首先点一下更新按钮更新客户端文件
+然后把图中蓝色部分替换成以下代码
+<img src="data:image/gif;base64,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" data-src="https://i.loli.net/2018/04/11/5ace117d78878.png" alt="把图中蓝色部分替换成以下代码" /></p>
+
+<pre><code class="language-ini">[common]
+server_addr = Frp服务端IP（服务器IP，例：144.172.85.185）
+server_port = 7000
+privilege_token = Moexin
+tcp_mux = true
+[ssh]
+type = tcp
+local_port = 22
+remote_port = 6000
+use_encryption = true
+use_compression = true
+[web]
+privilege_mode = true
+remote_port = 6000
+type = http
+local_ip = 内网IP（例：192.168.123.1）
+local_port = 888
+use_gzip = true
+#subdomain = test
+custom_domains = 公网访问的域名(例：98k.li)
+#host_header_rewrite = 
+#log_file = /dev/null
+#log_level = info
+#log_max_days = 3
+</code></pre>
+
+<p>最后开启<code>启用 frp 内网穿透</code> <code>启用 frpc 客户端</code>并应用本页面设置即可完成内网穿透，尽情享用吧~</p>
+</article>
+                <section class="author">
+                    <div class="avatar" style="background-image: url(/blog/images/favicon.png);"></div>
+                    <a class="name" href="/blog/about.me.html">Moexin</a>
+                    <div class="intro">心若浮沉，浅笑安然。一期一会，世当珍惜。</div>
+                </section>
+                <section class="recommend">
+                    
+                    
+                    <section class="nav next">
+                        <div class="head">下篇文章</div>
+                        <a class="link" href="/blog/30%e5%88%86%e9%92%9f%e6%90%ad%e5%bb%ba%20typecho%20%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2%e6%95%99%e7%a8%8b.html">30分钟搭建 Typecho 个人博客教程</a>
+                    </section>
+                    
+                </section>
+                
+
+
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zNTE4OC8xMTcyMw==">
+	<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+	</script>
+<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+
+
+
+            </article>
+        </article>
+        <footer class="footer">
+    <span class="copyright">
+        Moexin&#39;s Blog ©
+        <script type="text/javascript">
+            document.write(new Date().getFullYear());
+        </script>
+    </span>
+    <span class="publish">Powered by <a href="//98k.li" target="_blank">Moexin</a></span>
+</footer>
+
+        <script src="/blog/bundle/index.js"></script>
+    </body>
+</html>
