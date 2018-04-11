@@ -10,7 +10,7 @@ preview: Frp 是一个可用于内网穿透的高性能的反向代理应用，�
 ---
 
 ## 缘起
-一直在用老毛子Padavan固件，然而近期有一个需要在外网访问内网某资源的需求，然后看到老毛子固件集成了Ngrok，然后使用小宝的一键安装搞半天还是没成，一怒之下去各种找替代Ngrok的方案。一不小心在GitHub上找到一个小清新，那就是Frp(https://github.com/fatedier/frp)作者也是因为受不了Ngrok，然后自己整了这个方案。
+一直在用老毛子Padavan固件，然而近期有一个需要在外网访问内网某资源的需求，然后看到老毛子固件集成了Ngrok，然后使用小宝的一键安装搞半天还是没成，一怒之下去各种找替代Ngrok的方案。一不小心在GitHub上找到一个小清新，那就是Frp([https://github.com/fatedier/frp](https://github.com/fatedier/frp))作者也是因为受不了Ngrok，然后自己整了这个方案。
 ## Frp方案优势
 
  1. 作者已经编译了各平台的二进制包，无需自己编译。
@@ -20,9 +20,9 @@ preview: Frp 是一个可用于内网穿透的高性能的反向代理应用，�
 
 不夸了，各位自己看作者的帮助就好，中文帮助在此：https://github.com/fatedier/frp/blob/master/README_zh.md
 ### 服务端：
-最新版本下载地址：https://github.com/fatedier/frp/releases
+最新版本下载地址：https://github.com/fatedier/frp/releases  
 我们以v0.16.1版本在一台装有Debian8 x64系统的VPS为例。
- 
+
 首先拉取Frp v0.16.1版本的压缩包
 ``` lsl
 wget https://github.com/fatedier/frp/releases/download/v0.16.1/frp_0.16.1_linux_amd64.tar.gz
