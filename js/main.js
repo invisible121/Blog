@@ -1,5 +1,5 @@
 // 一言调用
-$.post("https://sslapi.hitokoto.cn/",null,function(e){
+$.post("https://v1.hitokoto.cn",null,function(e){
 	$('.content').html(e.hitokoto+" —— <strong>"+e.from+"</strong>")
 },'JSON');
 // // 鼠标滑入事件
