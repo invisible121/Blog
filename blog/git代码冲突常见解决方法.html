@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=1">
+<meta name="renderer" content="webkit">
+<meta name="google" value="notranslate">
+<meta name="robots" content="index,follow">
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Moexin&#39;s Blog">
+<meta name="twitter:description" content="心若浮沉，浅笑安然。一期一会，世当珍惜。">
+<meta name="twitter:image:src" content="https://98k.li/blog/blog/images/favicon.png">
+
+<meta property="og:url" content="https://98k.li/blog">
+<meta property="og:title" content="Moexin&#39;s Blog">
+<meta property="og:description" content="心若浮沉，浅笑安然。一期一会，世当珍惜。">
+<meta property="og:site_name" content="Moexin&#39;s Blog">
+<meta property="og:image" content="https://98k.li/blog/blog/images/favicon.png">
+<meta property="og:type" content="website">
+<meta name="robots" content="noodp">
+
+<meta itemprop="name" content="Moexin&#39;s Blog">
+<meta itemprop="description" content="心若浮沉，浅笑安然。一期一会，世当珍惜。">
+<meta itemprop="image" content="https://98k.li/blog/blog/images/favicon.png">
+
+<link rel="canonical" href="https://98k.li/blog">
+
+<link rel="shortcut icon" href="/blog/favicon.png">
+<link rel="apple-itouch-icon" href="/blog/favicon.png">
+<link rel="stylesheet" href="/blog/bundle/index.css">
+<script type="text/javascript">
+    var timeSinceLang = {
+        year: '年前',
+        month: '个月前',
+        day: '天前',
+        hour: '小时前',
+        minute: '分钟前',
+        second: '秒前'
+    };
+    var root = '\/blog';
+</script>
+
+
+        <meta name="keywords" content="Git,">
+        <meta name="description" content="Git:代码冲突常见解决方法">
+        <meta name="author" content="Moexin">
+        <title>Git:代码冲突常见解决方法</title>
+    </head>
+    <body>
+        <article class="container">
+            <header class="header-wrap">
+  <a class="index" href="/blog/">
+    <img class="logo" src="/blog/images/favicon.png" />
+    Moexin&#39;s Blog
+  </a>
+  <ul class="menu">
+      <li class="menu-item"><a href="/blog/archive.html">归档</a></li>
+      <li class="menu-item"><a href="/blog/tag.html">标签</a></li>
+	  <li class="menu-item"><a href="/blog/link.html">友链</a></li>
+      <li class="menu-item"><a href="/blog/atom.xml">订阅</a></li>
+  </ul>
+</header>
+
+            <article class="main article">
+                <h1 class="title">Git:代码冲突常见解决方法</h1>
+                <section class="info">
+                    <span class="avatar" style="background-image: url(/blog/images/favicon.png);"></span>
+                    <a class="name" href="/blog/about.me.html">Moexin</a>
+                    
+                    <span class="date" data-time="1527420840"><span class="from"></span></span>
+                    
+                    <span class="tags"><a class="tag" href="/blog/tag/Git/index.html">Git</a></span>
+                </section>
+                <article class="content"><p>如果系统中有一些配置文件在服务器上做了配置修改,然后后续开发又新添加一些配置项的时候,发布这个配置文件就会发生代码冲突:</p>
+
+<pre><code>error: Your local changes to the following files would be overwritten by merge:
+        protected/config/main.php
+Please, commit your changes or stash them before you can merge.
+</code></pre>
+
+<p>如果希望保留生产服务器上所做的改动,仅仅并入新配置项, 处理方法如下:</p>
+
+<pre><code>git stash
+git pull
+git stash pop
+</code></pre>
+
+<p>然后可以使用<code>git diff -w +文件名</code>来确认代码自动合并的情况.</p>
+
+<p>反过来,如果希望用代码库中的文件完全覆盖本地工作版本. 方法如下:</p>
+
+<pre><code>git reset --hard
+git pull
+</code></pre>
+
+<p>其中git reset是针对版本,如果想针对文件回退本地修改,使用</p>
+
+<pre><code>git checkout HEAD file/to/restore
+</code></pre>
+</article>
+                <section class="author">
+                    <div class="avatar" style="background-image: url(/blog/images/favicon.png);"></div>
+                    <a class="name" href="/blog/about.me.html">Moexin</a>
+                    <div class="intro">心若浮沉，浅笑安然。一期一会，世当珍惜。</div>
+                </section>
+                <section class="recommend">
+                    
+                    <section class="nav prev more">
+                        <div class="head">上篇文章</div>
+                        <a class="link" href="/blog/sed%e4%b8%80%e4%ba%9b%e5%b8%b8%e7%94%a8%e7%9a%84%e5%91%bd%e4%bb%a4%e8%af%a6%e8%a7%a3.html">Sed:一些常用的命令详解</a>
+                    </section>
+                    
+                    
+                    <section class="nav next more">
+                        <div class="head">下篇文章</div>
+                        <a class="link" href="/blog/%e8%80%81%e6%af%9b%e5%ad%90padavan%e5%9b%ba%e4%bb%b6%e4%bd%bf%e7%94%a8frp%e8%bf%9b%e8%a1%8c%e5%86%85%e7%bd%91%e7%a9%bf%e9%80%8f%e5%ae%9e%e6%88%98%e6%95%99%e7%a8%8b.html">老毛子Padavan固件使用Frp进行内网穿透实战教程</a>
+                    </section>
+                    
+                </section>
+                
+
+
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zNTE4OC8xMTcyMw==">
+	<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+	</script>
+<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+
+
+
+            </article>
+        </article>
+        <footer class="footer">
+    <span class="copyright">
+        Moexin&#39;s Blog ©
+        <script type="text/javascript">
+            document.write(new Date().getFullYear());
+        </script>
+    </span>
+    <span class="publish">Powered by <a href="//98k.li" target="_blank">Moexin</a></span>
+</footer>
+
+        <script src="/blog/bundle/index.js"></script>
+    </body>
+</html>

@@ -1,12 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
   <title>Moexin&#39;s Blog</title>
   <id>https://98k.li/blog</id>
-  <updated>2018-04-11T22:05:57+08:00</updated>
+  <updated>2018-05-27T19:27:39+08:00</updated>
   <subtitle>心若浮沉，浅笑安然。一期一会，世当珍惜。</subtitle>
   <link href="https://98k.li/blog"></link>
   <author>
     <name>Moexin&#39;s Blog</name>
   </author>
+  <entry>
+    <title>Sed:一些常用的命令详解</title>
+    <updated>2018-05-27T19:35:00+08:00</updated>
+    <id>tag:98k.li,2018-05-27:/blog/sed一些常用的命令详解.html</id>
+    <content type="html">&lt;p&gt;Sed是一个很好的文件处理工具，本身是一个管道命令，主要是以行为单位进行处理，可以将数据行进行替换、删除、新增、选取等特定工作，下面先了解一下Sed的用法。&lt;/p&gt;&#xA;</content>
+    <link href="https://98k.li/blog/sed一些常用的命令详解.html"></link>
+    <author>
+      <name>Moexin</name>
+    </author>
+  </entry>
+  <entry>
+    <title>Git:代码冲突常见解决方法</title>
+    <updated>2018-05-27T19:34:00+08:00</updated>
+    <id>tag:98k.li,2018-05-27:/blog/git代码冲突常见解决方法.html</id>
+    <content type="html">&lt;p&gt;如果系统中有一些配置文件在服务器上做了配置修改,然后后续开发又新添加一些配置项的时候,发布这个配置文件就会发生代码冲突，我们该怎么办呢？&lt;/p&gt;&#xA;</content>
+    <link href="https://98k.li/blog/git代码冲突常见解决方法.html"></link>
+    <author>
+      <name>Moexin</name>
+    </author>
+  </entry>
   <entry>
     <title>老毛子Padavan固件使用Frp进行内网穿透实战教程</title>
     <updated>2018-04-11T22:49:00+08:00</updated>
@@ -83,26 +103,6 @@
     <id>tag:98k.li,2018-02-24:/blog/bbr+bbr魔改+lotsever(锐速)一键脚本 for centosdebianubuntu.html</id>
     <content type="html">&lt;p&gt;对于出口带宽，我们常常采用BBR，锐速等TCP加速软件来争夺带宽提高自己的速度。但是原版的BBR并没有太多侵略性，在这个人人都用TCP加速的大环境下，BBR的加速功效就略显不足了。loc的大佬专门改进了下这个BBR，使BBR具有了侵略性。&lt;/p&gt;&#xA;</content>
     <link href="https://98k.li/blog/bbr+bbr魔改+lotsever(锐速)一键脚本 for centosdebianubuntu.html"></link>
-    <author>
-      <name>Moexin</name>
-    </author>
-  </entry>
-  <entry>
-    <title>FinalShell 支持多平台  远程桌面加速  多功能优秀SSH客户端</title>
-    <updated>2017-12-10T11:41:00+08:00</updated>
-    <id>tag:98k.li,2017-12-10:/blog/finalshell 支持多平台  远程桌面加速  多功能优秀ssh客户端.html</id>
-    <content type="html">&lt;p&gt;FinalShell是一体化的的服务器,网络管理软件,不仅是ssh客户端,还是功能强大的开发,运维工具,充分满足开发,运维需求.&lt;/p&gt;&#xA;</content>
-    <link href="https://98k.li/blog/finalshell 支持多平台  远程桌面加速  多功能优秀ssh客户端.html"></link>
-    <author>
-      <name>Moexin</name>
-    </author>
-  </entry>
-  <entry>
-    <title>魔改 BBR 一键安装脚本 for Debian &amp; CentOS</title>
-    <updated>2017-11-18T15:46:00+08:00</updated>
-    <id>tag:98k.li,2017-11-18:/blog/魔改 bbr 一键安装脚本 for debian &amp; centos.html</id>
-    <content type="html">&lt;p&gt;BBR 当然是家喻户晓了，是出自谷歌员工之手的应用于 Linux 内核中的拥塞控制技术。为了加速国内与目标服务器间的网络，让 BBR 发挥出更大（暴力）的实力，魔改就此诞生。&lt;/p&gt;&#xA;</content>
-    <link href="https://98k.li/blog/魔改 bbr 一键安装脚本 for debian &amp; centos.html"></link>
     <author>
       <name>Moexin</name>
     </author>
